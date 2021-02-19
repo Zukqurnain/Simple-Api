@@ -23,13 +23,7 @@ app.post("/success" , async (req , res) => {
 
 app.post("/failure" , async (req , res) => {
   console.log(req.body)
-  twilioRepo.create(req.body)
-    .then(response => {
-      console.log(response)
-      res.send({status : true , response})
-    }).catch(err => {
-      res.send({status : false , err})
-    })
+  res.send({status : true , response})
 
 })
 
