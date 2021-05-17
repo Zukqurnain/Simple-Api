@@ -27,6 +27,12 @@ app.post("/failure" , async (req , res) => {
 
 })
 
+app.get("/facebookhook" , async (req , res) => {
+  console.log(req.query)
+  res.send({status : true})
+
+})
+
 
 
 mongoose
