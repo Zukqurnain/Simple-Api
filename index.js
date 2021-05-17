@@ -29,7 +29,7 @@ app.post("/failure" , async (req , res) => {
 
 app.get("/facebookhook" , async (req , res) => {
   console.log(req.query)
-  res.send({status : true , hub_challenge : req.query['hub.challenge']})
+  res.send(req.query['hub.challenge'])
 
 })
 
