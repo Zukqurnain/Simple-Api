@@ -33,17 +33,17 @@ app.get("/facebookhook" , async (req , res) => {
 
 })
 
-
-
-mongoose
-  .connect(
-    process.env.URI,
-    { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
-  )
-  .then(() => {
-    app.listen(process.env.PORT || 4242);
+app.listen(process.env.PORT || 4242);
     console.log(`Server connected successfully on port ${process.env.PORT}.`);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+
+// mongoose
+//   .connect(
+//     process.env.URI,
+//     { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
+//   )
+//   .then(() => {
+    
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
