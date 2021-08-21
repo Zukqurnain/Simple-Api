@@ -23,7 +23,7 @@ app.post("/success" , async (req , res) => {
 
 app.post("/failure" , async (req , res) => {
   console.log(req.body)
-  res.send({status : true , response})
+  res.send({status : true})
 
 })
 
